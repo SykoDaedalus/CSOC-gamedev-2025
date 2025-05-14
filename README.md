@@ -22,8 +22,7 @@ By the end, you should be proficient enough to create something awesome!
 
 <table>
 <tr>
-  <td>
-
+  
 ```javascript
  void Start()
 {
@@ -42,7 +41,8 @@ rb.velocity = new Vector2(rb.velocity.x, jumpForce);
 
 ```
 
-  </td>
+</tr>
+<tr>
   <td>
     <img align="center" alt="Anime.js code example" src="https://i.pinimg.com/originals/14/b9/9e/14b99e109b3a1f14dfeaf54bb83f55f8.gif">
   </td>
