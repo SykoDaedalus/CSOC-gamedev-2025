@@ -141,7 +141,15 @@ No worries! If you have experience in C, you'll find C# to be more structured an
 6. In Edit Mode, click **Run All** after writing your code to run the tests.
    <img align="center" alt="Test screen" src="https://i.pinimg.com/736x/3f/48/5e/3f485e5c2a60fda06516eef5f6902c13.jpg" width="560">
 
-7. Once you're done, take a screenshot of your result.
+7. ### 📌 Important Submission Step
+
+> **Once your solutions are complete and you no longer plan to make changes**, follow these steps:
+
+  . Create a new folder inside the `problems/` directory.  
+   **Name it as:** `YourName_RollNumber`  
+   _Example:_ `problems/Ayush_2101234`
+
+. Move your solution `.cs` file(s) and the `Problem.asmdef` file into that folder.
 
 8. Raise a pull request and attach the screenshot in the description.
 
