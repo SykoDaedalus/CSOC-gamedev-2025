@@ -22,33 +22,29 @@ By the end, you should be proficient enough to create something awesome!
 
 <table>
 <tr>
-  <td style="vertical-align: top; width: 30%;">
-    <pre>
+  <td>
 
-```c#
-void Start()
+```javascript
+ void Start()
 {
-    rb = GetComponent<Rigidbody2D>();
+rb = GetComponent<Rigidbody2D>();
+}
+void Update(){
+
+transform.Translate(Vector2.right * speed * Time.deltaTime);
+
+isGrounded = Physics2D.Raycast(transform.position, Vector2.down, 1f, groundLayer);
+
+if (Input.GetKeyDown(KeyCode.Space) && isGrounded){
+
+rb.velocity = new Vector2(rb.velocity.x, jumpForce);
 }
 
-void Update()
-{
-    transform.Translate(Vector2.right * speed * Time.deltaTime);
-
-    isGrounded = Physics2D.Raycast(transform.position, Vector2.down, 1f, groundLayer);
-
-    if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
-    {
-        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-    }
-}
 ```
-<pre/>
 
-    
   </td>
-  <td style="text-align: center; width: 100%;">
-    <img src="https://i.pinimg.com/originals/14/b9/9e/14b99e109b3a1f14dfeaf54bb83f55f8.gif" width="100%">
+  <td>
+    <img align="center" alt="Anime.js code example" src="https://i.pinimg.com/originals/14/b9/9e/14b99e109b3a1f14dfeaf54bb83f55f8.gif">
   </td>
 </tr>
 </table>
