@@ -96,7 +96,8 @@ Once installed, create a Unity account if prompted.
 
 ### 3. Install Unity Editor
 
-Download the latest **Unity Editor (LTS version)** through Unity Hub. Use the default installation settings.
+Download **Unity Editor (LTS version)** through Unity Hub. Use the default installation settings.
+(Its advisable to download version 2022.3 to easily follow along. Later you can upgrade the editor as per your needs)
 
 > You may **uncheck Visual Studio Community** during installation—we'll use **Visual Studio Code** instead.
 
