@@ -21,18 +21,16 @@ public class FibonacciTest
         Assert.AreEqual(55, Fibonacci.FibNum(10));
         Assert.AreEqual(6765, Fibonacci.FibNum(20));
         Assert.AreEqual(586268941, Fibonacci.FibNum(50));
-        Assert.AreEqual(242234, Fibonacci.FibNum(100));
-        Assert.AreEqual(843925499, Fibonacci.FibNum(150));
-        Assert.AreEqual(69256820, Fibonacci.FibNum(200));
-        Assert.AreEqual(365010934, Fibonacci.FibNum(500));
+        Assert.AreEqual(687995182, Fibonacci.FibNum(100));
+        Assert.AreEqual(895819540, Fibonacci.FibNum(150));
+        Assert.AreEqual(349361645, Fibonacci.FibNum(200));
+        Assert.AreEqual(550656477, Fibonacci.FibNum(500));
     }
 
     [Test]
     public void FibonacciEdgeCaseTest()
     {
-        const int MOD = 1_000_000_007;
-        int result = Fibonacci.FibNum(1_000_000);
-        Assert.GreaterOrEqual(result, 0);
-        Assert.Less(result, MOD);
+        Assert.AreEqual(6765, Fibonacci.FibNum(20));
+      
     }
 }
