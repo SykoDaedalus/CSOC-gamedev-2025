@@ -130,7 +130,7 @@ No worries! If you have experience in C, you'll find C# to be more structured an
 
 1. Fork the repository and clone it to your local machine.
 
-2. Open the project in an editor of your choice.
+2. Open the project in the unity editor.
 
 3. Create a new branch for your work.
 
