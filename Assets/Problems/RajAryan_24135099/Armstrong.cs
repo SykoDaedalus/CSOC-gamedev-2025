@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 public class Armstrong
 {
@@ -19,10 +20,36 @@ public class Armstrong
      *
      * Implement the method to return true if the number is Armstrong, otherwise false.
      */
+
+
+
     public static bool IsArmstrong(int number)
     {
         // write code here
         // just return true or false;
+        int digits = 0;
+        int n = number;
+        while (n != 0)
+        {
+            n /= 10;
+            digits++;
+        }
+        n = number;
+
+        double sum = 0;
+
+        while (n != 0)
+        {
+            int last = n % 10;
+            n /= 10;
+            sum += Math.Pow(last, digits);
+        }
+
+        if (number == Convert.ToInt32(sum))
+        {
+            return true;
+        }
+
         return false;
     }
 }
