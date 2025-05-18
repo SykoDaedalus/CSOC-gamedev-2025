@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,9 +27,27 @@ public class Fibonacci : MonoBehaviour
      * 
      * Tip: Use iteration instead of recursion to handle large inputs efficiently.
      */
+
+    static int MOD = Convert.ToInt32(1e9 + 7);
+    static int Fib(int n, Dictionary<int, int> memo)
+    {
+        if (n == 0) return 0;
+        if (n == 1 || n == 2) return 1;
+
+        if (memo.ContainsKey(n)) return memo[n];
+
+        int value = (Fib(n - 1, memo) + Fib(n - 2, memo)) % MOD;
+        memo.Add(n, value);
+
+        return value;
+
+    }
     public static int FibNum(int number)
     {
-        // Complete this function to return nth Fibonacci number.
-        return 0;
+        Dictionary<int, int> memo = new Dictionary<int, int>();
+
+        
+        
+        return Fib(number, memo);
     }
 }

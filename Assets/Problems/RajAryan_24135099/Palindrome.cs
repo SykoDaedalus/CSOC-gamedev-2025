@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 public class Palindrome
 {
@@ -20,8 +21,20 @@ public class Palindrome
      */
     public static bool isPalindrome(int number)
     {
-        // write code here
-        // just return true or false
-        return false;
+        string a = Convert.ToString(number);
+        int i = 0;
+        int j = a.Length - 1;
+
+        while (i <= j)
+        {
+            if (a[i] != a[j])
+            {
+                return false;
+            }
+            i++;
+            j--;
+        }
+
+        return true;
     }
 }
