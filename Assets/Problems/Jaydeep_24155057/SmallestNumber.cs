@@ -1,6 +1,7 @@
-using Unity;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 public class SmallestNumber
 {
@@ -27,10 +28,10 @@ public class SmallestNumber
         for (int i = 0; i < digits.Length; i++)
         {
             Console.WriteLine(digits[i]);
-           
+
         }
-         Console.WriteLine(string.Join(" ", digits));
-      
+        Console.WriteLine(string.Join(" ", digits));
+
         return 0;
     }
     public static void Main(string[] args)

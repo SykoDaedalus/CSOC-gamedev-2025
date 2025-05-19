@@ -1,15 +1,16 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 public class Palindrome
 {
-   
+
     public static bool isPalindrome(int number)
     {
         string a = number.ToString();
         int len = a.Length;
-        
+
         for (int i = 0; i < len / 2; i++)
         {
             if (a[i] != a[len - i - 1])
