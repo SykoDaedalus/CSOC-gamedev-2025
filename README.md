@@ -98,7 +98,6 @@ Download **Unity Editor (LTS version)** through Unity Hub. Use the default insta
 - Setting up VS Code for Unity: *[Watch here](https://www.youtube.com/watch?v=your-link)*
 
 ---
-<details>
 ## C# Programming Essentials
 
 ### For Beginners
@@ -115,9 +114,11 @@ No worries! If you have experience in C, you'll find C# to be more structured an
 
 ---
 
-<summary> <strong> 
-  ## Week 0 Task
-</strong> </summary>
+
+<h1>Week 0 Task</h1>
+
+<details>
+  <summary><strong>Click to expand Week 0 details</strong></summary>
 
 ## Instructions
 
@@ -267,9 +268,12 @@ We always instantiate a [Prefab](https://docs.unity3d.com/Manual/Prefabs.html)
 Rotations in unity are dealt with Quaternions. Although as sort of hack you will always see that we use either Quaternion.Identity or transform.rotation when we want no rotations or want the instantiated GameObject to match the rotation of parent respectively. But it is always good to know your maths concept.[Quaternions](https://www.youtube.com/watch?v=zjMuIxRvygQ)
 
 ## Spawning Enemies and Its AI
-Now you know about:Movement,rotation and spawning you can create Enemy spawning mechanism and Its very basic AI to follow the player.
+   Now you know about:Movement,rotation and spawning you can create Enemy spawning mechanism and Its very basic AI to follow the player.
 
+
+## Video Resources
 This [video](https://www.youtube.com/watch?v=XtQMytORBmM) will help you getting Idea of Unity Editor and how to work around It. For now, you can skip the UI section.
+
 
 # Task
 - Sync your fork and fetch the updates
