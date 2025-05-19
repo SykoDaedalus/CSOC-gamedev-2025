@@ -68,15 +68,6 @@ Before you begin, ensure you're familiar with the following:
 
 ---
 
-## Task Overview
-
-This guide will help you:
-
-1. Set up Unity on your system
-2. Configure Visual Studio Code for Unity development
-3. Brush up on essential C# programming concepts
-
----
 
 ## Setup Instructions
   
@@ -107,7 +98,7 @@ Download **Unity Editor (LTS version)** through Unity Hub. Use the default insta
 - Setting up VS Code for Unity: *[Watch here](https://www.youtube.com/watch?v=your-link)*
 
 ---
-
+<details>
 ## C# Programming Essentials
 
 ### For Beginners
@@ -123,7 +114,7 @@ No worries! If you have experience in C, you'll find C# to be more structured an
 - [Brackeys C# Beginner Playlist](https://www.youtube.com/playlist?list=PLPV2KyIb3jR4u5jX8za5iU1v4I1tfi8mN)
 
 ---
-<details>
+
 <summary> <strong> 
   ## Week 0 Task
 </strong> </summary>
