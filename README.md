@@ -68,15 +68,6 @@ Before you begin, ensure you're familiar with the following:
 
 ---
 
-## Task Overview
-
-This guide will help you:
-
-1. Set up Unity on your system
-2. Configure Visual Studio Code for Unity development
-3. Brush up on essential C# programming concepts
-
----
 
 ## Setup Instructions
   
@@ -107,7 +98,7 @@ Download **Unity Editor (LTS version)** through Unity Hub. Use the default insta
 - Setting up VS Code for Unity: *[Watch here](https://www.youtube.com/watch?v=your-link)*
 
 ---
-
+<details>
 ## C# Programming Essentials
 
 ### For Beginners
@@ -123,7 +114,7 @@ No worries! If you have experience in C, you'll find C# to be more structured an
 - [Brackeys C# Beginner Playlist](https://www.youtube.com/playlist?list=PLPV2KyIb3jR4u5jX8za5iU1v4I1tfi8mN)
 
 ---
-<details>
+
 <summary> <strong> 
   ## Week 0 Task
 </strong> </summary>
@@ -285,7 +276,7 @@ This [video](https://www.youtube.com/watch?v=XtQMytORBmM) will help you getting 
 - Open the project in editor. In Assets/submissions create a folder with <YourName_RollNumber>
 - Copy the template scene in your folder. The template scene looks kinda plain but don't worry it can be converted to something nice. We are just at the prototyping stage
 - Add player movement,shooting bullets, the gun rotating according to mouse position and enemy spawning.
-- create a PR.
+- create a PR. The PR should have a video attached of your work.
 
 
 
