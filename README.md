@@ -276,7 +276,7 @@ This [video](https://www.youtube.com/watch?v=XtQMytORBmM) will help you getting 
 - Open the project in editor. In Assets/submissions create a folder with <YourName_RollNumber>
 - Copy the template scene in your folder. The template scene looks kinda plain but don't worry it can be converted to something nice. We are just at the prototyping stage
 - Add player movement,shooting bullets, the gun rotating according to mouse position and enemy spawning.
-- create a PR.
+- create a PR. The PR should have a video attached of your work.
 
 
 
