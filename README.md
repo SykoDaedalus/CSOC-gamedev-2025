@@ -150,7 +150,11 @@ No worries! If you have experience in C, you'll find C# to be more structured an
 </details>
 
 # Week 1 
-### Hola Dear Programmers and Developers,lend me your ears. We Officially Begin with CSOC and this week 1. 
+
+<details>
+  <summary><strong>Click to expand Week 1 details</strong></summary>
+
+  ### Hola Dear Programmers and Developers,lend me your ears. We Officially Begin with CSOC and this week 1. 
 
 In this week we will be getting familiar with Unity UI, Components,RigidBody Colliders etc and By the end we will have our humble beginnings for something legendary. Lets Begin
 
@@ -283,14 +287,112 @@ This [video](https://www.youtube.com/watch?v=XtQMytORBmM) will help you getting 
 - create a PR. The PR should have a video attached of your work.
 
 
+</details>
+
+# Week 2
+<em> Sorry for late task upload</em>
+<p align="center">
+  <picture align="center">
+    <source media="(prefers-color-scheme: dark)" srcset="[https://i.pinimg.com/originals/6f/55/e1/6f55e1dadbe4e0a7f7cc01c5751cdcf2.gif](https://i.pinimg.com/originals/6f/55/e1/6f55e1dadbe4e0a7f7cc01c5751cdcf2.gif)">
+    <img align="center" alt="Sample GIF" src="https://i.pinimg.com/originals/6f/55/e1/6f55e1dadbe4e0a7f7cc01c5751cdcf2.gif" width="560">
+  </picture>
+</p>
+
+### Hola Amigo, Kaise ho Thik ho?. This week will be tackling Parallax, level generation and UI
+<p align="center">
+  <picture align="center">
+    <source media="(prefers-color-scheme: dark)" srcset="[https://i.pinimg.com/originals/99/11/37/9911376abae57e7ea29aa11a47d464dd.gif](https://i.pinimg.com/originals/99/11/37/9911376abae57e7ea29aa11a47d464dd.gif)">
+    <img align="center" alt="Sample GIF" src="https://i.pinimg.com/originals/99/11/37/9911376abae57e7ea29aa11a47d464dd.gif" width="560">
+  </picture>
+</p>
+
+## The Parallax effect
+The parallax effect is a visual technique that creates an illusion of depth by moving background layers at different speeds relative to foreground objects. As the camera or player moves, distant objects appear to move slower than nearby objects, mimicking how our eyes perceive depth in the real world.
+
+#### Mathematical Foundation
+The core principle relies on inverse linear interpolation based on depth. For a layer at depth <code>z</code> with a reference <code>depth z_ref</code>, the parallax factor is:
+<code>parallax_factor = z_ref / z</code>
+
+When the camera moves by displacement <code>Δx</code>, each layer moves by:
+<code>layer_displacement = Δx × parallax_factor</code>
+
+Where <code>parallax_strength</code> controls the effect intensity (typically 0.1 to 1.0).
+use cinemachine for smooth camera following. You dont need to implement it manually.
+
+## Level Generation
 
 
+Level generation in endless runners involves creating an infinite, seamless sequence of platforms, obstacles, and collectibles that maintains consistent difficulty progression and player engagement. The system must generate content ahead of the player while destroying passed content to manage memory efficiently.
 
+## Mathematical Foundation
 
+**Chunk-based Generation:**
+Divide the level into fixed-width chunks of length `L`. Generate new chunks when the player reaches a threshold distance:
+```
+generate_trigger = player_x + look_ahead_distance
+chunk_index = floor(generate_trigger / L)
+```
 
+**Difficulty Scaling:**
+Apply exponential or logarithmic difficulty curves:
+```
+difficulty(x) = base_difficulty × (1 + growth_rate)^(x/scale_factor)
+```
+Or for smoother scaling:
+```
+difficulty(x) = max_difficulty × (1 - e^(-growth_rate × x))
+```
 
+**Platform Spacing:**
+Use Perlin noise or sine waves for organic platform placement:
+```
+platform_height(x) = amplitude × sin(frequency × x + phase) + base_height
+gap_size(x) = min_gap + noise(x × gap_frequency) × gap_variance
+```
 
+**Jump Validation:**
+Ensure all gaps are traversable by checking jump physics:
+```
+max_jump_distance = initial_velocity × time_to_peak + 0.5 × gravity × time_to_peak²
+```
+Where `time_to_peak = initial_velocity / gravity`
 
+**Probability Distribution:**
+Use weighted random selection for obstacle types:
+```
+cumulative_weight = Σ(weight_i) for i ∈ obstacles
+selection = random(0, cumulative_weight)
+```
+
+## Implementation Overview
+
+Most endless runners use:
+
+1. **Chunk Management System**: Pre-generate chunks in a circular buffer, destroying chunks behind the player. Typically maintain 3-5 chunks: current, next 2-3 ahead, and previous 1-2 for safety.
+
+2. **Template-based Generation**: Create hand-crafted chunk templates with difficulty ratings, then select and modify them procedurally based on current difficulty level and recent history.
+
+3. **Constraint Solving**: Use rule-based systems to ensure generated content follows game rules (no impossible jumps, mandatory collectible placement, safe landing zones after difficult sections).
+
+The key is balancing randomness with predictability—enough variation to feel fresh while maintaining learnable patterns. Many systems use "breathing room" mechanics, inserting easier sections after difficult ones to prevent player frustration and allow skill expression windows.
+
+## Game UI
+[This video will help you get an Idea about Game UI](https://www.youtube.com/watch?v=BLfNP4Sc_iA)
+
+## Task Summary
+-Create a Parallax background with smooth camera following using cinemachine (or manually if you hate your life). You can use any background asset of your choice. We will not see how your game "looks" in tasks, that is for the final week Game Jam 😜.
+
+-Add a well balanced platoform generation. You can add spiked platoform, stealth spot etc. It has go well with enemy spawning of Week 1
+- Add simple Game UI. Health bar is necessary. Additionally, you can try adding Enemy wave countdown time, Or the duration left for using your "Super Move".
+
+Good Luck 👍
+
+<p align="center">
+  <picture align="center">
+    <source media="(prefers-color-scheme: dark)" srcset="[https://i.pinimg.com/originals/68/d9/ab/68d9ab65ee90c04f7e7a26f8ff80c371.gif](https://i.pinimg.com/originals/68/d9/ab/68d9ab65ee90c04f7e7a26f8ff80c371.gif)">
+    <img align="center" alt="Sample GIF" src="https://i.pinimg.com/originals/68/d9/ab/68d9ab65ee90c04f7e7a26f8ff80c371.gif" width="560">
+  </picture>
+</p>
 
 
 
