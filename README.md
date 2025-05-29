@@ -380,9 +380,9 @@ The key is balancing randomness with predictability—enough variation to feel f
 [This video will help you get an Idea about Game UI](https://www.youtube.com/watch?v=BLfNP4Sc_iA)
 
 ## Task Summary
--Create a Parallax background with smooth camera following using cinemachine (or manually if you hate your life). You can use any background asset of your choice. We will not see how your game "looks" in tasks, that is for the final week Game Jam 😜.
+- Create a Parallax background with smooth camera following using cinemachine (or manually if you hate your life). You can use any background asset of your choice. We will not see how your game "looks" in tasks, that is for the final week Game Jam 😜.
 
--Add a well balanced platoform generation. You can add spiked platoform, stealth spot etc. It has go well with enemy spawning of Week 1
+- Add a well balanced platoform generation. You can add spiked platoform, stealth spot etc. It has go well with enemy spawning of Week 1
 - Add simple Game UI. Health bar is necessary. Additionally, you can try adding Enemy wave countdown time, Or the duration left for using your "Super Move".
 
 Good Luck 👍
