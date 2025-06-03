@@ -290,6 +290,8 @@ This [video](https://www.youtube.com/watch?v=XtQMytORBmM) will help you getting 
 </details>
 
 # Week 2
+<details>
+  <summary><strong>Click to expand Week 2 details</strong></summary>
 <em> Sorry for late task upload</em>
 <p align="center">
   <picture align="center">
@@ -394,9 +396,209 @@ Good Luck 👍
   </picture>
 </p>
 
+</details>
 
+# Week 3
+<em>"These are very deep waters" - Sherlock Holmes</em>
 
+### We will be Tackling Different Enemy Classes and Completing Menus
 
+---
+
+## Enemy Classes using OOP
+
+### What is OOP in Game Development?
+
+**Object-Oriented Programming** helps us create enemies that share common features but behave differently. Think of it like a family tree - all enemies are related but each has unique traits.
+
+### Basic OOP Concepts
+
+#### 1. **Inheritance** - "Is-A" Relationship
+All enemies share basic properties like health, speed, and the ability to move and attack.
+
+```csharp
+// Parent class - what ALL enemies have
+public class Enemy : MonoBehaviour 
+{
+    public float health = 100f;
+    public float speed = 5f;
+    public float damage = 10f;
+    
+    public virtual void Attack() 
+    {
+        // Basic attack behavior
+    }
+}
+```
+
+#### 2. **Polymorphism** - Same Action, Different Results
+Each enemy type attacks differently, even though they all use the same `Attack()` method.
+
+```csharp
+// Child classes - specific enemy types
+public class MeleeEnemy : Enemy 
+{
+    public override void Attack() 
+    {
+        // Punch the player up close
+    }
+}
+
+public class RangedEnemy : Enemy 
+{
+    public override void Attack() 
+    {
+        // Shoot bullets from far away
+    }
+}
+```
+
+### Different Enemy Types
+
+#### **Melee Enemy** 🗡️
+- **What they do**: Get close and punch/slash
+- **Properties**: High health, medium speed, short attack range
+- **Behavior**: Chase player directly, attack when close
+
+```pseudocode
+MeleeEnemy:
+    - health = 150
+    - speed = 6
+    - attackRange = 2 units
+    - behavior: run straight at player
+```
+
+#### **Ranged Enemy** 🏹
+- **What they do**: Stay far and shoot projectiles
+- **Properties**: Low health, slow speed, long attack range
+- **Behavior**: Keep distance, shoot bullets
+
+```pseudocode
+RangedEnemy:
+    - health = 80
+    - speed = 3
+    - attackRange = 10 units
+    - behavior: maintain distance, shoot bullets
+```
+
+#### **Tank Enemy** 🛡️
+- **What they do**: Slow but very strong and tough
+- **Properties**: Very high health, very slow, medium damage
+- **Behavior**: Slowly advances, hard to kill
+
+```pseudocode
+TankEnemy:
+    - health = 300
+    - speed = 2
+    - attackRange = 3 units
+    - behavior: slow advance, high defense
+```
+
+#### **Speed Enemy** ⚡
+- **What they do**: Fast hit-and-run attacks
+- **Properties**: Low health, very fast, quick attacks
+- **Behavior**: Dash in, attack, dash out
+
+```pseudocode
+SpeedEnemy:
+    - health = 60
+    - speed = 10
+    - attackRange = 1.5 units
+    - behavior: quick strikes, retreat quickly
+```
+
+### How OOP Helps Us
+
+#### **Code Reusability**
+```csharp
+// We write movement code once in Enemy class
+// All enemy types can use it
+public void Move(Vector3 direction) 
+{
+    transform.Translate(direction * speed * Time.deltaTime);
+}
+```
+
+#### **Easy to Add New Enemies**
+```csharp
+// Want a flying enemy? Just inherit from Enemy
+public class FlyingEnemy : Enemy 
+{
+    public float flyHeight = 5f;
+    
+    public override void Move(Vector3 direction) 
+    {
+        // Flying movement logic
+        Vector3 flyPosition = direction + Vector3.up * flyHeight;
+        transform.Translate(flyPosition * speed * Time.deltaTime);
+    }
+}
+```
+
+#### **Polymorphism in Action**
+```csharp
+// One array holds different enemy types
+Enemy[] enemies = {new MeleeEnemy(), new RangedEnemy(), new TankEnemy()};
+
+// Same code works for all enemy types
+foreach(Enemy enemy in enemies) 
+{
+    enemy.Attack(); // Each enemy attacks their own way!
+    enemy.Move(playerDirection); // Each enemy moves their own way!
+}
+```
+
+---
+
+## Menu Systems Theory
+
+<img align="center" alt="Test screen" src="https://i.pinimg.com/736x/be/57/0d/be570d1ba24775fbc07d0d829ed4187d.jpg" width="560">
+
+### What Makes Good Game Menus?
+
+#### **Menu Hierarchy**
+Menus are organized like a tree:
+```
+Main Menu
+├── Play Game
+├── Settings
+│   ├── Graphics
+│   ├── Audio
+│   └── Controls
+├── Credits
+└── Quit
+```
+
+#### **User Experience Principles**
+- **Simple Navigation**: Easy to understand where to go
+- **Visual Feedback**: Buttons respond when hovered/clicked
+- **Consistent Layout**: Similar elements look and behave the same
+- **Clear Information**: Users know what each button does
+
+#### **Menu Types**
+- **Main Menu**: First thing player sees, leads to game or settings
+- **Pause Menu**: Appears during gameplay, allows pausing/resuming
+- **Settings Menu**: Lets players customize game experience
+- **Game Over Menu**: Shows when player loses, options to restart
+
+#### **Design Considerations**
+- **Loading States**: Show progress when loading content
+- **Input Methods**: Work with keyboard, mouse, and gamepad
+- **Screen Sizes**: Look good on different screen resolutions
+- **Accessibility**: Consider colorblind players, clear text sizing
+
+### Menu Navigation Patterns
+- **Linear**: One menu leads to next (Intro → Main → Game)
+- **Hub Model**: Main menu connects to all other menus
+- **Breadcrumb**: Players can see their path (Main > Settings > Audio)
+- **Modal**: Pop-up menus that block other interactions
+
+ ## Task Summary
+- Create atleast 4 different enemy types.
+
+- Create all necessary Menus (Main, Options, Pause).
+
+Good Luck 👍
 
 
 
